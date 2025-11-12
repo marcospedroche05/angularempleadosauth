@@ -1,0 +1,15 @@
+<div>
+    <h1 class="text-danger text-center">Login</h1>
+    <br>
+    <div class="d-flex justify-content-center">
+        <div class="border border-danger rounded rounded-5 bg-dark p-3 w-50">
+            <form #formLogin="ngForm" (submit)="iniciarSesion()">
+                <label class="text-danger">UserName: </label><br>
+                <input type="text" class="form-control" #cajaname name="cajaname"/><br>
+                <label class="text-danger">Password: </label><br>
+                <input type="password" class="form-control" #cajapassword name="cajapassword"/><br>
+                <button class="btn btn-outline-danger">Iniciar sesion</button>
+            </form>
+        </div>
+    </div>
+</div>

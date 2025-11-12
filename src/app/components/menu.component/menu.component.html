@@ -1,0 +1,16 @@
+<div>
+    <ul class="d-flex justify-content-around">
+        <li>
+            <a [routerLink]="['/']" class="text-danger">Home</a>
+        </li>
+        <li>
+            <a [routerLink]="['/perfil']" class="text-danger">Perfil</a>
+        </li>
+        <li>
+            <a [routerLink]="['/subordinados']" class="text-danger">Subordinados</a>
+        </li>
+        <li *ngIf="sesion">
+            <button (click)="cerrarSesion()" class="bg-dark text-danger btn btn-dark">Cerrar sesion</button>
+        </li>
+    </ul>
+</div>
