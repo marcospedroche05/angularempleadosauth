@@ -21,7 +21,7 @@ export class LoginComponent {
       this.token = response.response;
       console.log(this.token)
       localStorage.setItem('token', this.token);
-      this._router.navigate(["/perfil"])
+      this._router.navigate(["/perfil"]).then(() => window.location.reload())
     })
   }
 }

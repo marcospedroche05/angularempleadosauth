@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   public sesion = false;
 
+  constructor(private _router: Router){}
+
   ngOnInit(): void {
     if(localStorage.getItem("token")){
       this.sesion = true;
@@ -18,6 +21,6 @@ export class MenuComponent implements OnInit {
 
   cerrarSesion(): void {
     localStorage.setItem("token", "");
-    window.location.reload();
+    this._router.navigate(["/"]).then(() => window.location.reload())
   }
 }
